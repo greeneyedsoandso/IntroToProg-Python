@@ -25,15 +25,14 @@ while(True):
     strChoice = input("Exit? ('y/n'): ")
     if strChoice.lower() == 'y':
         break
-    print(lstTable, '<< List with Dictionary objects')
+    print('Current data:', lstTable)
 
 while(True):
-    strItem = input('item to remove: ')
+    strItem = input('Item to remove: ')
+    strStatus = 'Row not found' # Boolean flag method
     for row in lstTable:
-        if row['item'].lower() != strItem.lower():
-            print('row not found')
-            print(lstTable, '<< List with Dictionary objects')
-        else:
+        if row['item'].lower() == strItem.lower():
             lstTable.remove(row)
-            print('row removed')
-            print(lstTable, '<< List with Dictionary objects')
+            strStatus = 'Row removed.'
+    print(strStatus)
+    print('Updated data:', lstTable)
