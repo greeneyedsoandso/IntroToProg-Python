@@ -75,7 +75,12 @@ while (True):
         continue
     # Step 6 - Save tasks to the ToDoToDoList.txt file
     elif (strChoice.strip() == '4'):
-        # TODO: Add Code Here
+        # TODO: Consider adding other confirmation of content
+        objFile = open("ToDoList.txt", 'w')
+        for row in lstTable:
+            objFile.write(str(row['task'] + ',' + str(row['priority'])))
+        objFile.close()
+        print('Saved in file!')
         continue
     # Step 7 - Exit program
     elif (strChoice.strip() == '5'):
