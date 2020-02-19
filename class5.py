@@ -8,11 +8,12 @@ for row in objFile:
 objFile.close()
 
 print('using Dictionary objects')
+lstTable = []
 dicRow = {}
 objFile = open("HomeInventory.txt", 'r')
 for row in objFile:
     i, v = row.split(',')
     dicRow = {'item': i, 'value': v}
-    print(dicRow)
-    print(dicRow['item'] + '|' + dicRow['value'].strip())
+    lstTable.append(dicRow)
+    print(lstTable, '<< List with Dictionary objects')
 objFile.close()
