@@ -62,7 +62,16 @@ while (True):
         continue
     # Step 5 - Remove a new item to the list/Table
     elif (strChoice.strip() == '3'):
-        # TODO: Add Code Here
+        # TODO: Exit loop
+        while (True):
+            strTask = input('Task to remove: ')
+            strStatus = 'Row not found'  # Boolean flag method
+            for row in lstTable:
+                if row['task'].lower() == strTask.lower():
+                    lstTable.remove(row)
+                    strStatus = 'Row removed.'
+            print(strStatus)
+            print('Updated data:', lstTable)
         continue
     # Step 6 - Save tasks to the ToDoToDoList.txt file
     elif (strChoice.strip() == '4'):
