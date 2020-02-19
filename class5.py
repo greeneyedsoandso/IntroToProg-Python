@@ -29,10 +29,13 @@ while(True):
 
 while(True):
     strItem = input('Item to remove: ')
-    strStatus = 'Row not found' # Boolean flag method
+    blnStatus = False # Boolean flag method
     for row in lstTable:
         if row['item'].lower() == strItem.lower():
             lstTable.remove(row)
-            strStatus = 'Row removed.'
-    print(strStatus)
+            blnStatus = True
+    if blnStatus == True:
+        print('Row removed')
+    else:
+        print('Row not found')
     print('Updated data:', lstTable)
