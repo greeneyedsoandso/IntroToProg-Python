@@ -29,14 +29,22 @@ while(True):
 
 while(True):
     strItem = input('Item to remove: ')
-    blnStatus = False # Boolean flag method
+    blnStatus = False  # Boolean flag method
     for row in lstTable:
         if row['item'].lower() == strItem.lower():
             lstTable.remove(row)
             blnStatus = True
     if blnStatus:
         print('Row removed')
+        print('Updated data:', lstTable)
+        break
     else:
         print('Row not found')
-    print('Updated data:', lstTable)
-    break
+        print('Updated data:', lstTable)
+        break
+
+objFile = open("HomeInventory.txt", 'w')
+for row in lstTable:
+    objFile.write(str(row['item'] + ',' + str(row['value'] + '\n')))
+objFile.close()
+print('Saved in file!')
