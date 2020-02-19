@@ -34,8 +34,9 @@ while(True):
         if row['item'].lower() == strItem.lower():
             lstTable.remove(row)
             blnStatus = True
-    if blnStatus == True:
+    if blnStatus:
         print('Row removed')
     else:
         print('Row not found')
     print('Updated data:', lstTable)
+    break
