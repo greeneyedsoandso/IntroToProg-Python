@@ -6,7 +6,7 @@
 #              Add the each dictionary "row" to a python list "table"
 # ChangeLog (Who,When,What):
 # RRoot,1.1.2030,Created started script
-# <YOUR NAME HERE>,<DATE>,Added code to complete assignment 5
+# JDSmith,2.18.2020,started editing for assignment 5
 # ------------------------------------------------------------------------ #
 
 # -- Data -- #
@@ -23,7 +23,13 @@ strChoice = "" # A Capture the user option selection
 # Step 1 - When the program starts, load the any data you have
 # in a text file called ToDoList.txt into a python Dictionary.
 # TODO: Add Code Here
-
+objFile = open('ToDoList.txt', 'r')
+for row in objFile:
+    i, v = row.split(',')
+    dicRow = {'item': i, 'value': v}
+    lstTable.append(dicRow)
+    print(lstTable, '<< List with Dictionary objects')
+objFile.close()
 # -- Input/Output -- #
 # Step 2 - Display a menu of choices to the user
 while (True):
