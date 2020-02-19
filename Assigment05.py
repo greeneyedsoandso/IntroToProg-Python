@@ -50,7 +50,7 @@ while (True):
         continue
     # Step 4 - Add a new item to the list/Table
     elif (strChoice.strip() == '2'):
-        # TODO: Add Code Here
+        # TODO: Make prettier
         while (True):
             strTask = input('Task: ')
             strPriority = input('Priority: ')
@@ -58,7 +58,7 @@ while (True):
             strChoice = input("Exit? ('y/n'): ")
             if strChoice.lower() == 'y':
                 break
-            print('Current data:', lstTable)
+        print('Current data:', lstTable)
         continue
     # Step 5 - Remove a new item to the list/Table
     elif (strChoice.strip() == '3'):
