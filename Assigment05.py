@@ -26,9 +26,8 @@ strChoice = "" # A Capture the user option selection
 objFile = open('ToDoList.txt', 'r')
 for row in objFile:
     i, v = row.split(',')
-    dicRow = {'item': i, 'value': v}
+    dicRow = {'task': i, 'priority': v}
     lstTable.append(dicRow)
-    print(lstTable, '<< List with Dictionary objects')
 objFile.close()
 # -- Input/Output -- #
 # Step 2 - Display a menu of choices to the user
@@ -45,7 +44,9 @@ while (True):
     print()  # adding a new line for looks
     # Step 3 - Show the current items in the table
     if (strChoice.strip() == '1'):
-        # TODO: Add Code Here
+        # TODO: Make prettier
+        for row in lstTable:
+            print(str(row['task'] + ',' + str(row['priority'])))
         continue
     # Step 4 - Add a new item to the list/Table
     elif (strChoice.strip() == '2'):
