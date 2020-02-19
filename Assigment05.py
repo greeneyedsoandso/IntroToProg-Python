@@ -22,7 +22,7 @@ strChoice = "" # A Capture the user option selection
 # -- Processing -- #
 # Step 1 - When the program starts, load the any data you have
 # in a text file called ToDoList.txt into a python Dictionary.
-# TODO: Add Code Here
+
 objFile = open('ToDoList.txt', 'r')
 for row in objFile:
     i, v = row.split(',')
@@ -51,6 +51,14 @@ while (True):
     # Step 4 - Add a new item to the list/Table
     elif (strChoice.strip() == '2'):
         # TODO: Add Code Here
+        while (True):
+            strTask = input('Task: ')
+            strPriority = input('Priority: ')
+            lstTable.append({'task': strTask, 'priority': strPriority})
+            strChoice = input("Exit? ('y/n'): ")
+            if strChoice.lower() == 'y':
+                break
+            print('Current data:', lstTable)
         continue
     # Step 5 - Remove a new item to the list/Table
     elif (strChoice.strip() == '3'):
