@@ -86,5 +86,6 @@ while (True):
         continue
     # Step 7 - Exit program
     elif (strChoice.strip() == '5'):
-        # TODO: Add Code Here
-        break  # and Exit the program
+        print('Happy planning!')
+        break  # and Exit the program5
+# TODO: add message for not-menu entry
