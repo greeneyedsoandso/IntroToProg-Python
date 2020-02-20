@@ -5,6 +5,7 @@
 #              in "ToDoToDoList.txt" into a python Dictionary.
 #              Add the each dictionary "row" to a python list "table"
 # ChangeLog (Who,When,What):
+# JDSmith,2.19.2020, made all loops end, made things pretty
 # JDSmith,2.19.2020, added functionality to all sections
 # JDSmith,2.18.2020,started editing for assignment 5
 # RRoot,1.1.2030,Created started script
@@ -36,11 +37,11 @@ objFile.close()
 while (True):
     print("""
     Menu of Options
-    1) Show current data
-    2) Add a new item.
-    3) Remove an existing item.
-    4) Save Data to File
-    5) Exit Program
+    1) Show current To Do List
+    2) Add a new task
+    3) Remove an existing task
+    4) Save To Do List to file
+    5) Exit program
     """)
     strChoice = str(input("Which option would you like to perform? [1 to 5] - "))
     print()  # adding a new line for looks
@@ -87,7 +88,6 @@ while (True):
             continue
     # Step 6 - Save tasks to the ToDoToDoList.txt file
     elif (strChoice.strip() == '4'):
-        # TODO: Consider adding other confirmation of content
         objFile = open("ToDoList.txt", 'w')
         for row in lstTable:
             objFile.write(str(row['task'] + ',' + str(row['priority'])))
