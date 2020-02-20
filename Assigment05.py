@@ -46,10 +46,11 @@ while (True):
     print()  # adding a new line for looks
     # Step 3 - Show the current items in the table
     if (strChoice.strip() == '1'):
-        # TODO: Make prettier
         for row in lstTable:
-            print(str(row['task'] + ',' + str(row['priority'])))
+            print(str(row['task'] + ', ' + row['priority'].strip()))
+        print('-' * 55)  # a divider before the menu displays again
         continue
+
     # Step 4 - Add a new item to the list/Table
     elif (strChoice.strip() == '2'):
         # TODO: Make prettier
