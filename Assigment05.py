@@ -60,7 +60,7 @@ while (True):
             strChoice = input("Exit to menu? (y/n): ")
             if strChoice.lower() == 'y':
                 break
-        print('\n' + '-'*55 + '\nCurrent data:')
+        print('\n' + '-'*55 + '\nCurrent To Do List:')
         for row in lstTable:
             print(str(row['task'] + ', ' + row['priority'].strip()))
         print('-' * 55)  # a divider before the menu displays again
