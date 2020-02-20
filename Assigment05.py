@@ -46,6 +46,7 @@ while (True):
     print()  # adding a new line for looks
     # Step 3 - Show the current items in the table
     if (strChoice.strip() == '1'):
+        print('-' * 55)
         for row in lstTable:
             print(str(row['task'] + ', ' + row['priority'].strip()))
         print('-' * 55)  # a divider before the menu displays again
@@ -60,27 +61,27 @@ while (True):
             strChoice = input("Exit to menu? (y/n): ")
             if strChoice.lower() == 'y':
                 break
-        print('\n' + '-'*55 + '\nCurrent To Do List:')
+        print('\nCurrent To Do List:\n' + '-'*55)
         for row in lstTable:
             print(str(row['task'] + ', ' + row['priority'].strip()))
         print('-' * 55)  # a divider before the menu displays again
         continue
     # Step 5 - Remove a new item to the list/Table
     elif (strChoice.strip() == '3'):
-        # TODO: Exit loop
         while (True):
             strTask = input('Task to remove: ')
-            strStatus = 'Row not found'  # Boolean flag method
+            strStatus = '\nRow not found.'
             for row in lstTable:
                 if row['task'].lower() == strTask.lower():
                     lstTable.remove(row)
                     strStatus = 'Row removed.'
+                    print('Updated To Do List:\n'+'-'*55)
+                    for row in lstTable:
+                        print(str(row['task'] + ', ' + row['priority'].strip()))
+                    print('-' * 55)  # a divider before the menu displays again
             print(strStatus)
-            print('\n' + '-' * 55 + '\nUpdated To Do List:')
-            for row in lstTable:
-                print(str(row['task'] + ', ' + row['priority'].strip()))
-            print('-' * 55)  # a divider before the menu displays again
             strChoice = input("Exit to menu? (y/n): ")
+            print()
             if strChoice.lower() == 'y':
                 break
             continue
