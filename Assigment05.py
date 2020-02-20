@@ -92,7 +92,7 @@ while (True):
         for row in lstTable:
             objFile.write(str(row['task'] + ',' + str(row['priority'])))
         objFile.close()
-        print('Saved in file!')
+        print('Saved in ToDoList.txt')
         continue
     # Step 7 - Exit program
     elif (strChoice.strip() == '5'):
