@@ -5,8 +5,9 @@
 #              in "ToDoToDoList.txt" into a python Dictionary.
 #              Add the each dictionary "row" to a python list "table"
 # ChangeLog (Who,When,What):
-# RRoot,1.1.2030,Created started script
+# JDSmith,2.19.2020, added functionality to all sections
 # JDSmith,2.18.2020,started editing for assignment 5
+# RRoot,1.1.2030,Created started script
 # ------------------------------------------------------------------------ #
 
 # -- Data -- #
@@ -16,8 +17,9 @@ strData = ""  # A row of text data from the file
 dicRow = {}    # A row of data separated into elements of a dictionary {Task,Priority}
 lstTable = []  # A dictionary that acts as a 'table' of rows
 strMenu = ""   # A menu of user options
-strChoice = "" # A Capture the user option selection
-
+strChoice = ""  # A Capture the user option selection
+strTask = ''  # Task entry
+strPriority = ''  # Priority entry
 
 # -- Processing -- #
 # Step 1 - When the program starts, load the any data you have
