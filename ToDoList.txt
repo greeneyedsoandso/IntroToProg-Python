@@ -1,2 +1,4 @@
-Do assignment05, High
-Watch TV, Low
+Do assignment05,High
+Watch TV,Low
+finish lunch,highest
+mail letter,medium

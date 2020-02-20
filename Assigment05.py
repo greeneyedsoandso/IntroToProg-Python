@@ -76,8 +76,15 @@ while (True):
                     lstTable.remove(row)
                     strStatus = 'Row removed.'
             print(strStatus)
-            print('Updated data:', lstTable)
-        continue
+            print('\n' + '-' * 55 + '\nUpdated To Do List:')
+            for row in lstTable:
+                print(str(row['task'] + ', ' + row['priority'].strip()))
+            print('-' * 55)  # a divider before the menu displays again
+            strChoice = input("Exit to menu? (y/n): ")
+            if strChoice.lower() == 'y':
+                break
+            continue
+
     # Step 6 - Save tasks to the ToDoToDoList.txt file
     elif (strChoice.strip() == '4'):
         # TODO: Consider adding other confirmation of content
