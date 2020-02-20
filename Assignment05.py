@@ -77,7 +77,7 @@ while (True):
                 if row['task'].lower() == strTask.lower():
                     lstTable.remove(row)
                     strStatus = 'Row removed.'
-                    print('Updated To Do List:\n'+'-'*55)
+                    print('\nUpdated To Do List:\n'+'-'*55)
                     for row in lstTable:
                         print(str(row['task'] + ', ' + row['priority'].strip()))
                     print('-' * 55)  # a divider before the menu displays again
