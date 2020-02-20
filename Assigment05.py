@@ -85,7 +85,6 @@ while (True):
             if strChoice.lower() == 'y':
                 break
             continue
-
     # Step 6 - Save tasks to the ToDoToDoList.txt file
     elif (strChoice.strip() == '4'):
         # TODO: Consider adding other confirmation of content
@@ -99,4 +98,6 @@ while (True):
     elif (strChoice.strip() == '5'):
         print('Happy planning!')
         break  # and Exit the program5
-# TODO: add message for not-menu entry
+    else:
+        print('Please enter a number from 1 - 5.')
+        continue
