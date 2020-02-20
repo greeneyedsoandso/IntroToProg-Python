@@ -53,15 +53,17 @@ while (True):
 
     # Step 4 - Add a new item to the list/Table
     elif (strChoice.strip() == '2'):
-        # TODO: Make prettier
         while (True):
             strTask = input('Task: ')
             strPriority = input('Priority: ')
             lstTable.append({'task': strTask, 'priority': strPriority})
-            strChoice = input("Exit? ('y/n'): ")
+            strChoice = input("Exit to menu? (y/n): ")
             if strChoice.lower() == 'y':
                 break
-        print('Current data:', lstTable)
+        print('\n' + '-'*55 + '\nCurrent data:')
+        for row in lstTable:
+            print(str(row['task'] + ', ' + row['priority'].strip()))
+        print('-' * 55)  # a divider before the menu displays again
         continue
     # Step 5 - Remove a new item to the list/Table
     elif (strChoice.strip() == '3'):
